@@ -1,36 +1,54 @@
-    <!DOCTYPE html>
+    <!doctype html>
 
 
-    <html>
+    <html lang='en'>
         <head>
-            
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>HGRMSF Home Page</title>   
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         </head>
 
         <body>
 
             {%include 'nav.html'%}
 
+            
+
             <section>
-                <div>
-                    <header>
-                        <h1>Welcome to HGRMSF</h1>
+                
+                <div class='container pt-5 mx-auto'>
+                    <img src='static/home_page_1.jpg' width='100%' height='400' class='object-fit-cover'> 
+                    <header class='pt-3'>
+                        <center><h1>Welcome to HGRMSF</h1></center>
                     </header>
-                    <div>
+                    <div class='container'>
                         <p>The official website of Holy Ghost Revival Mission Student Fellowship, Obafemi Awolowo University
                             Chapter
                         </p>
-                        <ul>
-                            <li><a>Read Up</a></li>
-                        </ul>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis, quam in tincidunt eleifend, ligula velit varius dolor, eu volutpat tellus justo non arcu. Fusce diam lorem, gravida ac cursus eget, molestie sit amet risus. Nullam blandit enim tellus, at bibendum magna ullamcorper vel. Nunc sagittis quis leo id interdum. Phasellus lectus diam, pretium vitae dolor a, dapibus scelerisque mauris. Ut ac accumsan nunc. Maecenas a lectus a metus ullamcorper placerat vitae aliquam ipsum. Curabitur tempus lorem eu purus consectetur imperdiet.
+
+Aliquam malesuada, lorem ac lacinia dignissim, dui lectus efficitur ligula, sit amet tristique ligula arcu sit amet mi. Pellentesque egestas egestas arcu id sollicitudin. Curabitur dignissim purus nec neque ornare, at aliquet dolor gravida. Cras faucibus lectus leo, vel eleifend quam fermentum quis. Duis ornare, turpis sed scelerisque dictum, diam libero convallis odio, vitae sodales magna quam ac dolor. Maecenas interdum, tellus non pellentesque scelerisque, elit quam congue neque, at varius ex ligula ultricies lorem. Etiam aliquet sapien lectus, id convallis erat convallis nec. In et posuere enim, id vestibulum ligula.
+
+Cras vitae ipsum nec felis placerat pulvinar nec sit amet ligula. Donec vitae dictum tortor. Curabitur ut quam porta leo ornare malesuada. Morbi sit amet metus arcu. Donec vel arcu at justo efficitur hendrerit nec et nulla. Aenean sagittis, nisl a pretium sagittis, urna lacus gravida dolor, non cursus risus odio in velit. Aenean id nisi in massa suscipit tempus. Aenean scelerisque odio non eros hendrerit vestibulum. Vivamus condimentum posuere aliquet. Donec tempus nibh ac dolor aliquam, id egestas ante facilisis. Praesent et accumsan tellus. Nunc vitae risus arcu. Cras dignissim, elit vitae vulputate porttitor, est massa interdum augue, et facilisis risus lacus id erat. Nulla feugiat mollis diam, ut sollicitudin enim tempus ut.
+
+Donec ut auctor urna. Proin nec leo pellentesque, pulvinar nisi et, vehicula odio. Nulla facilisi. Morbi sit amet interdum nisi. Nam feugiat pellentesque dolor sed fringilla. Aliquam eget pulvinar orci. Vivamus in malesuada velit, non auctor arcu. Proin pulvinar felis quis est interdum, sit amet luctus augue maximus. Nunc vitae feugiat dui, vitae rhoncus nisl. Aenean vitae tincidunt mi. Mauris nec eros lacinia quam ultrices luctus non eget mauris.
+
+Donec sed quam pretium, blandit nisl in, tempor magna. Sed mattis felis aliquam nisi accumsan imperdiet. Mauris nec pellentesque mauris. Proin metus lacus, ornare id augue ut, aliquet consectetur massa. Morbi scelerisque nisi in bibendum molestie. Ut facilisis risus id orci facilisis, vitae tristique elit posuere. Mauris volutpat urna nec blandit convallis. Suspendisse luctus enim vitae suscipit cursus. Proin sit amet volutpat diam, vitae dapibus dolor. Aenean congue nisi at enim pulvinar, in vestibulum sapien pretium. Donec nec rhoncus ex. Phasellus mollis dignissim neque, ut finibus turpis posuere id. Mauris bibendum fringilla nunc, ac luctus sapien tincidunt eget.
+                        </p>
+                        
+                    
                     </div>
                 </div>
             </section>
 
             <section>
 
-                <div>
-                    <header>
-                        <h1>About us</h1>
+                <div class='container'>
+                    <header class'pt-3'>
+                        <center><h1>About us</h1></center>
                     </header>
 
                     <p>
@@ -49,9 +67,9 @@
 
             <section>
 
-                <div>
-                    <header>
-                        <h1>Testimonies</h1>
+                <div class='container'>
+                    <header class='pt-3'>
+                        <center><h1>Testimonies</h1></center>
                     </header>
 
                     <p>
@@ -70,10 +88,11 @@
         
 
             	
-                   <!-- {%include 'contact.html'%} -->
+                  
 
-           
+           <br>
+           <section>
                     {% include 'footer.html' %}
-
+           </section>
         </body>
-</html>
+</html 
