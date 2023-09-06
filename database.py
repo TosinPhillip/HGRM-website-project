@@ -1,5 +1,5 @@
-from pyairtable import Table, Base, Api
-import os
+from pyairtable import Api
+
 
 # api_key is a general variable but the base_id is specifically for the HGRMSF base
 api_key = 'patZeMBA4dNElLfbp.fb12b8d190b52d1abc53d92308dd292f3bbe760bee758ac4ba57ebbf7dfbf576'
