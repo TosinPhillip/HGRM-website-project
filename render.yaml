@@ -1,0 +1,4 @@
+services:
+  - name: web
+    buildCommand: python3.10.9 -m pip install -r requirements.txt
+
