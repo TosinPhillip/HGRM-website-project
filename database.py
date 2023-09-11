@@ -22,8 +22,12 @@ def load_articles_from_airtable():
 
 def load_article_from_airtable(id):
     """Pulls a specific article dictionary"""
-    if len(Articles.get(id)) == 0:
-        return None
-    else:
-        return Articles.get(id)
+    return Articles.get(id)
+
+
+x = Articles.get('recN8Y2TZ5sX33RZd')['fields']['Photo']
+print(x[0]['thumbnails']['full']['url'])
+
+
+
 

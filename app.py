@@ -12,12 +12,13 @@ def home_page():
 
 @app.route('/articles')
 def article_list_page():
-    return render_template('article_list.html')
-
-
-@app.route('/api/articles')
-def article_api_page():
     blogs = load_articles_from_airtable()
+    return render_template('article_list.html', blogs=blogs)
+
+
+@app.route('/api/articles/<id>')
+def article_api_page(id):
+    blogs = load_article_from_airtable(id)
     return jsonify(blogs)
 
 @app.route('/articles/<id>')
