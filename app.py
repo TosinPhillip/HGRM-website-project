@@ -10,6 +10,7 @@ app = Flask(__name__)
 def home_page():
     return render_template('home_page.html')
 
+
 @app.route('/articles')
 def article_list_page():
     blogs = load_articles_from_airtable()

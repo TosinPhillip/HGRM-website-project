@@ -18,7 +18,7 @@
 
             <div class="card text-dark mx-auto border-light">
                 <img src="static/bible.jpg" class="card-img object-fit-cover" alt="..." width='100%' height='400'>
-                <div class="card-img-overlay text-start text-wrap pt-5" style="width: 35rem;">
+                <div class="card-img-overlay text-start text-wrap pt-5 d-none d-lg-block" style="width: 35rem;">
                   <h1 class="card-title">HGRMSF Board</h1>
                   <br>
                   <p class="card-text fs-3 fst-italic">Enjoy the articles from HGRMSF talented writers.</p>
@@ -57,7 +57,7 @@
                       <div class="card border-light">
                         <div class="row">
                           <div class="col-md-4">
-                            <img src="static/img_9.jpg" class="img-fluid rounded-start object-fit-fill" 
+                            <img src={{blog['fields']['Photo'][0]['thumbnails']['full']['url']}} class="img-fluid rounded-start object-fit-fill" 
                             height='5%' width='100%'>
                           </div>
                           <div class="col-md-4">
