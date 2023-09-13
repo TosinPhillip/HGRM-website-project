@@ -17,22 +17,9 @@
         <div class='container pt-5 mx-auto '>
 
             <div class="card text-dark mx-auto border-light">
-                <img src="static/bible.jpg" class="card-img object-fit-cover" alt="..." width='100%' height='400'>
+                <img src="static/hgrmsf_articles.jpg" class="card-img object-fit-cover" alt="..." width='100%' height='400'>
                 <div class="card-img-overlay text-start text-wrap pt-5 d-none d-lg-block" style="width: 35rem;">
-                  <h1 class="card-title">HGRMSF Board</h1>
-                  <br>
-                  <p class="card-text fs-3 fst-italic">Enjoy the articles from HGRMSF talented writers.</p>
-                  <br>
-                  <figure>
-                    <blockquote class="blockquote">
-                    <p>  ...out of Machir came down governors, and out of Zebulun they that handle the pen of 
-                        the writer.
-                    </p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                      Judges 5:14 <cite title="Source Title">(KJV)</cite>
-                    </figcaption>
-                  </figure>
+                  
 
                 </div>
               </div>
@@ -41,24 +28,20 @@
 
             
 
-            {% for blog in blogs %}
+            <div class='mt-4'>
+              {% for blog in blogs %}
               
-                    <!--<div class="card pt-3 border-light">
-                        <h5 class="card-header">{{blog['fields']['Title']}}</h5>
-                        <div class="card-body">
-                          <span><h5 class="card-title"><small>by</small> {{blog['fields']['Writers']}}</h5></span>
-                          <p class="card-text text-truncate" style="max-width: 1000x;">
-                            {{blog['fields']['Text']}}</p>
-                          <a href="/articles/{{blog['fields']['ID']}}" class="btn btn-primary">Read more...</a>
-                        </div>
-                      </div>-->
-                    <br>
-
-                      <div class="card border-light">
+                    
+                       <div class="card border-light">
                         <div class="row">
                           <div class="col-md-4">
-                            <img src={{blog['fields']['Photo'][0]['thumbnails']['full']['url']}} class="img-fluid rounded-start object-fit-fill" 
-                            height='5%' width='100%'>
+                            {% if blog['fields']['Photo'] %}
+                            <img src={{blog['fields']['Photo'][0]['thumbnails']['full']['url']}} class="img-fluid rounded-start object-fit-fill" height='5%' width='100%'>
+                             
+                            {% else %}
+                            <img src='static/bible.jpg' class='img-thumbnail' height='50%'>
+                            {% endif %}
+                           
                           </div>
                           <div class="col-md-4">
                             <div class="card-body">
@@ -72,6 +55,7 @@
                       </div>
              
             {% endfor %}
+                    </div>
         </div>
 
 

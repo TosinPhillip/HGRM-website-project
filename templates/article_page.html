@@ -15,28 +15,26 @@
     <body>
 
         {% include 'nav.html' %}
-        <!--<div class='container mx-auto mt-5'>
-            <center>
-                <h1>{{blog['fields']['Title']}}</h1>
-            </center>
+        <div class='container mx-auto mt-5'>
+            <h2 class='mx-auto mt-5'>{{blog['fields']['Title'].capitalize()}} </h2>
+                <p>by {{blog['fields']['Writers'].capitalize()}} | {{blog['fields']['Date']}} </p>
 
-            <pre><article class='container mt-3 text-wrap'>
-                {{blog['fields']['Text']}}
-            </article></pre>
-        </div>-->
-        
-        <div class="clearfix container mx-auto mt-5">
-            
-            <img src={{blog['fields']['Photo'][0]['thumbnails']['full']['url']}} class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
-            
-            <center><h2 class='mx-auto mt-5'>{{blog['fields']['Title'].capitalize()}}</h2></center>
-
+            <div class='mt-4'>
+                {% if blog['fields']['Photo'] %}
+                <img src={{blog['fields']['Photo'][0]['thumbnails']['full']['url']}} class='img-thumbnail' height='50%'>
+                {% else %}
+                <img src='/static/bible.jpg' class='img-thumbnail object-fit-cover' height='50%'>
+                {% endif %}
+                <div class='mt-4'>
             {% for par in blog['fields']['Text'].split('\n') %}
                 <p class='container'>{{par}}</p>
                 
             {% endfor %}
-           
-          </div>
+            </div>
+            </div>
+        
+        </div>
+        
         {% include 'footer.html' %}
     </body>
 
