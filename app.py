@@ -28,6 +28,10 @@ def each_article_page(id):
     blog = load_article_from_airtable(id)
     return render_template('article_page.html', blog=blog)
 
+@app.route('/about')
+def about_us:
+    return render_template('about_us.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
