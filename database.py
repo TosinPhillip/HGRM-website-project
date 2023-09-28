@@ -45,8 +45,4 @@ def load_article_from_airtable(id):
 # # print(x[0]['thumbnails']['full']['url'])
 # 
 # 
-blog = load_articles_from_airtable(0)
-
-print(type(blog))
-
 

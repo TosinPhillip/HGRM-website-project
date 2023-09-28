@@ -48,7 +48,7 @@
                               <h5 class="card-title">{{blog['fields']['Title']}}</h5>
                               <p class="card-text ">{{blog['fields']['Text'][:200]}}...</p>
                               <p class="card-text"><small class="text-body-secondary">{{blog['fields']['Writers']}}</small></p>
-                              <a href="/articles/{{blog['fields']['ID']}}" class="btn btn-primary">Read more</a>
+                              <a href="/article/{{blog['fields']['ID']}}" class="btn btn-primary">Read more</a>
                             </div>
                           </div>
                         </div>
@@ -56,6 +56,19 @@
              
             {% endfor %}
                     </div>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
         </div>
 
 
