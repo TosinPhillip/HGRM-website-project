@@ -46,7 +46,7 @@
                           <div class="col-md-4">
                             <div class="card-body">
                               <h5 class="card-title">{{blog['fields']['Title']}}</h5>
-                              <p class="card-text text-truncate" style="max-width: 600px;">{{blog['fields']['Text']}}</p>
+                              <p class="card-text ">{{blog['fields']['Text'][:200]}}...</p>
                               <p class="card-text"><small class="text-body-secondary">{{blog['fields']['Writers']}}</small></p>
                               <a href="/articles/{{blog['fields']['ID']}}" class="btn btn-primary">Read more</a>
                             </div>
