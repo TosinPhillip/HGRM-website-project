@@ -32,6 +32,10 @@ def each_article_page(id):
     blog = load_article_from_airtable(id)
     return render_template('article_page.html', blog=blog)
 
+@app.route('/doctrine')
+def doctrine():
+    return render_template('doctrine.html')
+
 # @app.route('/about')
 # def about_us:
 #     return render_template('about_us.html')
