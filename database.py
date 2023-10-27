@@ -32,6 +32,13 @@ def load_article_from_airtable(id):
     """Pulls a specific article dictionary"""
     return Articles.get(id)
 
+
+Media = api.table(base_id, 'Media')
+
+def load_media():
+    """Pulls a list of dictionaries of media in the table"""
+    m = Media.all()
+    return m
 # def paginate(list_bunch=None, item_number=10):
 #     """This function gets a list of items and an item number. It then returns the list in batches of item number"""
 #     # bunch_length = len(list_bunch)

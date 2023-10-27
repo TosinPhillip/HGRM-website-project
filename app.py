@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from database import load_articles_from_airtable, load_article_from_airtable
+from database import load_articles_from_airtable, load_article_from_airtable, load_media
 
 app = Flask(__name__)
 
@@ -36,9 +36,21 @@ def each_article_page(id):
 def doctrine():
     return render_template('doctrine.html')
 
-# @app.route('/about')
-# def about_us:
-#     return render_template('about_us.html')
+@app.route('/photos')
+def photos():
+    medias = load_media()
+    return render_template('photos.html', medias=medias)
+
+@app.route('/audios')
+def audios():
+    medias = load_media()
+    return render_template('audios.html', medias=medias)
+
+@app.route('/videos')
+def videos():
+    medias = load_media()   
+    return render_template('videos.html', medias=medias)
+
 
 
 
