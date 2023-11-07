@@ -7,6 +7,28 @@
     
     <!-- Link to Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous">
+    <style>
+        div.gallery {
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #777;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          height: 100%;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+        </style>
 </head>
 <body>
 
@@ -19,13 +41,24 @@
 <!--Images here-->
 {% if media['fields']['type'] == 'Image' %}
 
-<div class='container-fluid'>
+<div class="gallery container">
+
+    <img src="{{media['fields']['file'][0]['thumbnails']['full']['url']}}" class="figure-img img-fluid rounded" alt="...">
+    <figcaption class="figure-caption">{{media['fields']['caption']}}</figcaption>
+  
+</div>
+
+
+
+
+
+<!-- <div class='container-fluid'>
     <figure class="figure">
         <img src="{{media['fields']['file'][0]['thumbnails']['full']['url']}}" class="figure-img img-fluid rounded" alt="...">
         <figcaption class="figure-caption">{{media['fields']['caption']}}</figcaption>
       </figure>
 </div>
-
+-->
 
 
 {% endif %}
@@ -33,17 +66,18 @@
 {% endfor %}
 
 
-<!-- Content Section -->
+<!-- Content Section 
 <div class="container mt-4">
-    <!-- Media Gallery Section -->
+    <!-- Media Gallery Section 
     <div class="row" id="media-gallery">
-        <!-- Images, Videos, and Audios will be dynamically added here -->
+        <!-- Images, Videos, and Audios will be dynamically added here 
     </div>
 </div>
 
-<!-- Link to Bootstrap JavaScript (at the end of the body for faster page load) -->
+<!-- Link to Bootstrap JavaScript (at the end of the body for faster page load) 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-
+-->
+<br>
 
 {% include 'footer.html' %}
 </body>

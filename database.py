@@ -51,5 +51,3 @@ def load_media():
 # x = Articles.get('recN8Y2TZ5sX33RZd')['fields']['Photo']
 # # print(x[0]['thumbnails']['full']['url'])
 # 
-# 
-

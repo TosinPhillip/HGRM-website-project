@@ -17,13 +17,16 @@
 
 {% for media in medias %}
 <!--Images here-->
-{% if media['fields']['type'] == 'Image' %}
+{% if media['fields']['type'] == 'Audio' %}
 
-<div class='container-fluid'>
-    <figure class="figure">
-        <img src="{{media['fields']['file'][0]['thumbnails']['full']['url']}}" class="figure-img img-fluid rounded" alt="...">
-        <figcaption class="figure-caption">{{media['fields']['caption']}}</figcaption>
-      </figure>
+<div class="card">
+    <h5 class="card-header">Message</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{media['fields']['Title']}}</h5>
+      <p class="card-text">{{media['fields']['caption']}}</p>      
+      <a class="btn btn-primary" type="button" href="{{media['fields']['file'][0]['url']}}"> Download</a>
+    </div>
+    
 </div>
 
 
