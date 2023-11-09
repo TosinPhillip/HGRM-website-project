@@ -15,7 +15,7 @@
     <body>
 
         {% include 'nav.html' %}
-        <div class='container mx-auto mt-5'>
+       <!-- <div class='container mx-auto mt-5'>
             <h2 class='mx-auto mt-5'>{{blog['fields']['Title'].capitalize()}} </h2>
                 <p>by {{blog['fields']['Writers'].capitalize()}} | {{blog['fields']['Date']}} </p>
 
@@ -30,10 +30,30 @@
                 <p class='container'>{{par}}</p>
                 
             {% endfor %}
+
             </div>
             </div>
         
+        </div>-->
+
+        <div class='container'>
+                <iframe src={{blog['fields']['html']}}
+                style="
+              
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+                border: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                z-index: 999999;
+                height: 100%;
+              " allowfullscreen></iframe>
+
         </div>
+
         
         {% include 'footer.html' %}
     </body>

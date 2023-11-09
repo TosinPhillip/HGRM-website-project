@@ -32,7 +32,6 @@ def load_article_from_airtable(id):
     """Pulls a specific article dictionary"""
     return Articles.get(id)
 
-
 Media = api.table(base_id, 'Media')
 
 def load_media():
@@ -51,3 +50,4 @@ def load_media():
 # x = Articles.get('recN8Y2TZ5sX33RZd')['fields']['Photo']
 # # print(x[0]['thumbnails']['full']['url'])
 # 
+#load_article_from_airtable('rec53xanGnZpqvutb')
