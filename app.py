@@ -52,6 +52,13 @@ def videos():
     return render_template('videos.html', medias=medias)
 
 
+@app.route('/staff_advisers')
+def staff_adviser():
+    return render_template('staff_advisers.html')
+
+@app.route('/executives')
+def executivess():
+    return render_template('execs.html')
 
 
 
