@@ -10,19 +10,19 @@ app.use(express.static(__dirname + "/public/images"));
 
 // Route for rendering index.html
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.html");
 });
 
 app.get("/doctrine", (req, res) => {
-  res.render("doctrine.ejs");
+  res.render("doctrine.html");
 });
 
 app.get("/executives", (req, res) => {
-  res.render("execs.ejs");
+  res.render("execs.html");
 });
 
 app.get("/staff_advisers", (req, res) => {
-  res.render("staff_advisers.ejs");
+  res.render("staff_advisers.html");
 });
 
 app.listen(3000, () => {
