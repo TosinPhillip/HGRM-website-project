@@ -1,5 +1,6 @@
-"dependencies": {
-  "next": "^14.0.0",  // or any latest stable version
-  "react": "^18.0.0",
-  "react-dom": "^18.0.0"
+
+"scripts": {
+  "build": "next build",
+  "vercel-build": "npm run build"
 }
+
